@@ -1,0 +1,15 @@
+.Social{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.Social li a{
+    box-sizing: border-box;
+    margin: 5px;
+
+}
