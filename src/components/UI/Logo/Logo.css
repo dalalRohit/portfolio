@@ -1,0 +1,10 @@
+.Logo{
+    cursor: pointer;
+    font-family: 'Raleway';
+    font-size: 1.2rem;
+}
+
+.Logo:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color)
+}

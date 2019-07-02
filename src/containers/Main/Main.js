@@ -6,6 +6,10 @@ export default class Main extends Component {
         return (
             <div className={classes.Main}>
                 <p>MAIN CONTENT HERE</p>
+                <li>Home</li>
+                <li>Skills</li>
+                <li>Projects</li>
+                <li>Contact</li>
             </div>
         )
     }

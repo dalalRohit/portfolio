@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
 .Links li:hover{
-    background-color: var(--secondary-color);
+    text-decoration: underline;
 }
 .Links li:last-child{
     margin-right: 5px;

@@ -10,8 +10,7 @@
     left: 0;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* border: 1px solid black; */
+    align-items: center;
     background-color: var(--main-navbar-color);
     color: var(--main-text-color);
 }

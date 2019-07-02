@@ -4,7 +4,7 @@ import Auxi from './../../hoc/Auxi/Auxi';
 import Backdrop from './../UI/Backdrop/Backdrop';
 import Social from './../Social/Social';
 import Logo from './../UI/Logo/Logo';
-
+import { Link } from 'react-router-dom';
 export default function Sidenav(props) {
     let attachedClasses = [classes.Sidenav, classes.Close];
     if (props.show) {
@@ -22,10 +22,11 @@ export default function Sidenav(props) {
                 </div>
                 <nav className={classes.Items}>
                     <ul className={classes.Links}>
-                        <li onClick={props.click} ><a href="#">Home</a></li>
-                        <li onClick={props.click} ><a href="#">Home</a></li>
-                        <li onClick={props.click} ><a href="#">Home</a></li>
-                        <li onClick={props.click} ><a href="#">Home</a></li>
+                        <li onClick={props.click}> <Link to="/">Home</Link> </li>
+                        <li onClick={props.click}> <Link to="/about">About</Link> </li>
+                        <li onClick={props.click}> <Link to="/skills">Skills</Link> </li>
+                        <li onClick={props.click}> <Link to="/projects">Projects</Link> </li>
+                        <li onClick={props.click}> <Link to="/contact">Contact</Link> </li>
                     </ul>
                 </nav>
 

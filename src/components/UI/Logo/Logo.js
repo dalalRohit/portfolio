@@ -1,9 +1,10 @@
 import React from 'react'
+import classes from './Logo.css';
 
 export default function Logo() {
     return (
-        <div style={{ cursor: 'pointer' }}>
-            LOGO
+        <div className={classes.Logo}>
+            <p >Rohit Dalal</p>
         </div>
     )
 }
