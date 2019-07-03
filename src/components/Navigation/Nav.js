@@ -1,17 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import Item from './Item/Item';
 
 import classes from './Nav.css';
 function Nav() {
+    const links = {
+        home: { name: "Home", to: "/" },
+        about: { name: "About", to: "/about" },
+        skills: { name: "Skills", to: "/skills" },
+        projects: { name: "Projects", to: "/projects" },
+        contact: { name: "Contact", to: "/contact" },
+    }
+    let linksToDisplay = Object.keys(links).map((link) => {
+        return <Item
+            key={Math.random()}
+            to={links[link].to}
+            name={links[link].name} />
+    })
     return (
         <div className={classes.Nav}>
             <nav className={classes.Items}>
                 <ul className={classes.Links}>
-                    <li> <Link to="/">Home</Link> </li>
-                    <li> <Link to="/about">About</Link> </li>
-                    <li> <Link to="/skills">Skills</Link> </li>
-                    <li> <Link to="/projects">Projects</Link> </li>
-                    <li> <Link to="/contact">Contact</Link> </li>
+                    {linksToDisplay}
                 </ul>
             </nav>
         </div>

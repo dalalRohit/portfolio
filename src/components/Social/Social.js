@@ -6,20 +6,18 @@ import { FaTwitter, FaInstagram, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 export default function Social() {
     return (
         <div className={classes.Social}>
-            <li>
-                <a href="/">
-                    <FaGithub size={35} />
-                </a>
-                <a href="/">
-                    <FaLinkedinIn size={35} />
-                </a>
-                <a href="/">
-                    <FaTwitter size={35} />
-                </a>
-                <a href="/">
-                    <FaInstagram size={35} />
-                </a>
-            </li>
+            <a href="https://github.com/dalalRohit" target="_blank">
+                <FaGithub size={35} />
+            </a>
+            <a href="https://www.linkedin.com/in/rohit-dalal-61330116b/" target="_blank">
+                <FaLinkedinIn size={35} />
+            </a>
+            <a href="https://twitter.com/dalal__rohit" target="_blank">
+                <FaTwitter size={35} />
+            </a>
+            <a href="https://www.instagram.com/rohit__dalal/" target="_blank">
+                <FaInstagram size={35} />
+            </a>
         </div>
     )
 }

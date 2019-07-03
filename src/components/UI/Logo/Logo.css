@@ -1,7 +1,9 @@
 .Logo{
     cursor: pointer;
     font-family: 'Raleway';
-    font-size: 1.2rem;
+}
+.Logo p{
+    font-size: 1.7rem;
 }
 
 .Logo:hover{

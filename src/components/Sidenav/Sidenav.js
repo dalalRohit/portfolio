@@ -4,12 +4,27 @@ import Auxi from './../../hoc/Auxi/Auxi';
 import Backdrop from './../UI/Backdrop/Backdrop';
 import Social from './../Social/Social';
 import Logo from './../UI/Logo/Logo';
-import { Link } from 'react-router-dom';
+import Item from './../Navigation/Item/Item';
+
 export default function Sidenav(props) {
     let attachedClasses = [classes.Sidenav, classes.Close];
     if (props.show) {
         attachedClasses = [classes.Sidenav, classes.Open];
     }
+    const links = {
+        home: { name: "Home", to: "/" },
+        about: { name: "About", to: "/about" },
+        skills: { name: "Skills", to: "/skills" },
+        projects: { name: "Projects", to: "/projects" },
+        contact: { name: "Contact", to: "/contact" },
+    }
+    let linksToDisplay = Object.keys(links).map((link) => {
+        return <Item
+            click={props.click}
+            key={Math.random()}
+            to={links[link].to}
+            name={links[link].name} />
+    })
     return (
         <Auxi>
             <Backdrop
@@ -22,11 +37,7 @@ export default function Sidenav(props) {
                 </div>
                 <nav className={classes.Items}>
                     <ul className={classes.Links}>
-                        <li onClick={props.click}> <Link to="/">Home</Link> </li>
-                        <li onClick={props.click}> <Link to="/about">About</Link> </li>
-                        <li onClick={props.click}> <Link to="/skills">Skills</Link> </li>
-                        <li onClick={props.click}> <Link to="/projects">Projects</Link> </li>
-                        <li onClick={props.click}> <Link to="/contact">Contact</Link> </li>
+                        {linksToDisplay}
                     </ul>
                 </nav>
 
